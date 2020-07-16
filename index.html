@@ -13,14 +13,17 @@
     </head>
     <body>
       <h1>Tic Tac Toe</h1>
-      <p>This is a test</p>
       <p id="message"></p>
 
       <!-- main menu start -->
-      <!-- sign up , log in -->
+    <div id="main-menu">
+      <button id="login-button">Login</button> <br>
+      <button id="sign-up-button">Sign Up</button>
+    </div>
       <!-- main menu end -->
 
       <!-- Show Sign Up form after Sign Up has been clicked on main menu -->
+    <div id="all-auth">
       <form id="sign-up">
         <h2>Sign Up</h2>
         <input name="credentials[email]" type="email" placeholder="Email"/> <br>
@@ -37,6 +40,8 @@
         <button type="submit">Login</button>
       </form>
 
+      <button id="new-game">New Game</button>
+
       <form id="changepw">
         <h2>Change Password</h2>
         <input name="passwords[old]" type="password" placeholder="Current Password"> <br>
@@ -45,6 +50,20 @@
       </form>
 
       <button id="logout">Logout</button>
+    </div>
 
+    <div class="board container">
+      <div class="row">
+        <div class="1 col-4 cell border-top-0 border-left-0">X</div>
+        <div class="2 col-4 cell border-top-0">X</div>
+        <div class="3 col-4 cell border-top-0 border-right-0">X</div>
+        <div class="4 col-4 cell border-left-0">X</div>
+        <div class="5 col-4 cell">X</div>
+        <div class="6 col-4 cell border-right-0">X</div>
+        <div class="7 col-4 cell border-left-0 border-bottom-0">X</div>
+        <div class="8 col-4 cell border-bottom-0">X</div>
+        <div class="9 col-4 cell border-right-0 border-bottom-0">X</div>
+      <div class="row">
+    </div>
     </body>
 </html>

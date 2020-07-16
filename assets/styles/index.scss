@@ -7,3 +7,17 @@ body {
 #message {
   white-space: pre-wrap;
 }
+
+#all-auth {
+  // visibility: hidden;
+  display: none;
+}
+
+.board {
+  width: 450px;
+  display: none;
+  .cell {
+    border: 5px solid black;
+    height: 150px;
+  }
+}
