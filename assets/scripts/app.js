@@ -18,4 +18,6 @@ $(() => {
   $('#login-button').on('click', ui.onLoginClick)
 
   $('#new-game').on('click', gameEvents.onNewGame)
+
+  $('.cell').on('click', gameEvents.onMove)
 })

@@ -15,6 +15,8 @@ const loginSuccess = function (response) {
   $('form').trigger('reset')
   store.user = response.user
   $('form').trigger('reset')
+
+  console.log(store)
 }
 const loginFail = function () {
   $('#message').text('Login failed. =(\nPlease check credentials.')
@@ -26,6 +28,7 @@ const logoutSuccess = function () {
   store.user = null
   $('#main-menu').show()
   $('#all-auth,.board').hide()
+  $('.board').hide()
 }
 const logoutFail = function () {
   $('#message').text('Failed to logout. =(')
@@ -40,8 +43,8 @@ const changepwFail = function () {
 }
 
 const onLoginClick = function () {
-  $('#main-menu').hide()
-  $('#all-auth').show()
+  // $('#main-menu').hide()
+  $('.all-auth').show()
 }
 
 module.exports = {
