@@ -32,10 +32,19 @@
 
       <form id="login">
         <h2>Login</h2>
-        <input name="credentials[email]" type="text" placeholder="Email"> <br>
+        <input name="credentials[email]" type="email" placeholder="Email"> <br>
         <input name="credentials[password]" type="password" placeholder="Password"> <br>
         <button type="submit">Login</button>
       </form>
+
+      <form id="changepw">
+        <h2>Change Password</h2>
+        <input name="passwords[old]" type="password" placeholder="Current Password"> <br>
+        <input name="passwords[new]" type="password" placeholder="New Password"> <br>
+        <button type="submit">Submit</button>
+      </form>
+
+      <button id="logout">Logout</button>
 
     </body>
 </html>
