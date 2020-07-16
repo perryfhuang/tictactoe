@@ -2,25 +2,24 @@
 let store = require('../store')
 
 const signUpSuccess = function () {
-  $('#message').text('Account created! Go out there and dominate!')
+  $('#message').text('Account created!\nGo out there and dominate!')
   $('form').trigger('reset')
 }
 const signUpFail = function (error) {
-  $('#message').text('Failed to create account. See error message: ' + error.message)
+  $('#message').text('Failed to create account.\nSee error message: ' + error.message)
 }
 
 const loginSuccess = function (response) {
-  $('#message').text('Succesfully logged in. Let\'s play!')
+  $('#message').text('Succesfully logged in.\n Let\'s play!')
   $('form').trigger('reset')
   store.user = response.user
-  console.log(store)
 }
 const loginFail = function () {
-  $('#message').text('Login failed. =( \n Please check credentials.')
+  $('#message').text('Login failed. =(\nPlease check credentials.')
 }
 
 const logoutSuccess = function () {
-  $('#message').text('Succesfully logged out. Cya later!')
+  $('#message').text('Succesfully logged out.\nCya later!')
   $('form').trigger('reset')
   store.user = null
 }

@@ -30,7 +30,6 @@ const onLogout = function () {
 const onChangepw = function (event) {
   event.preventDefault()
   const formData = getFormFields(event.target)
-  console.log(formData)
   api.changepw(formData)
     .then(ui.changepwSuccess)
     .catch(ui.changepwFail)
