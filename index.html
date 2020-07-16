@@ -14,5 +14,28 @@
     <body>
       <h1>Tic Tac Toe</h1>
       <p>This is a test</p>
+      <p id="message"></p>
+
+      <!-- main menu start -->
+      <!-- sign up , log in -->
+      <!-- main menu end -->
+
+      <!-- Show Sign Up form after Sign Up has been clicked on main menu -->
+      <form id="sign-up">
+        <h2>Sign Up</h2>
+        <input name="credentials[email]" type="email" placeholder="Email"/> <br>
+        <input name="credentials[password]" type="password" placeholder="Password"/> <br>
+        <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password"/> <br>
+        <button type="submit">Sign Up</button>
+      </form>
+      <!--end Sign Up Form -->
+
+      <form id="login">
+        <h2>Login</h2>
+        <input name="credentials[email]" type="text" placeholder="Email"> <br>
+        <input name="credentials[password]" type="password" placeholder="Password"> <br>
+        <button type="submit">Login</button>
+      </form>
+
     </body>
 </html>
