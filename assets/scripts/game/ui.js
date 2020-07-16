@@ -14,7 +14,11 @@ const newGameFail = function () {
 
 const moveSuccess = function (response) {
   console.log(response)
-  $('#message').text('Move successful')
+  if (response.game.over === true) {
+    $('#message').text('Game Over!')
+  } else {
+    $('#message').text('Move successful')
+  }
 }
 const moveFail = function () {
     $('#message').text('Failed to make that move.')

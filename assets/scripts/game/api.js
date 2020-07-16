@@ -13,9 +13,15 @@ const newGame = function () {
 }
 
 const move = function (event, currentMove) {
-  console.log(event.dataset.index)
-  console.log(store)
-  console.log(store.user._id)
+  // console.log(event.dataset.index)
+  // console.log(store)
+  // console.log(store.user._id)
+  let gameOver = false
+  // console.log($('#zero').text(), $('#one').text(), $('#two').text())
+  if ($('#zero').text(), $('#one').text(), $('#two').text()) {
+    gameOver = true
+  }
+  console.log(gameOver)
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
@@ -28,7 +34,7 @@ const move = function (event, currentMove) {
           index: event.dataset.index,
           value: currentMove
         },
-        over: false
+        over: gameOver
       }
     }
   })
