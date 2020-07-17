@@ -7,6 +7,7 @@ const onNewGame = function (event) {
     .then(ui.newGameSuccess)
     .catch(ui.newGameFail)
 }
+
 // Declare first move token
 let currentMove = 'x'
 const onMove = function (event) {
@@ -15,7 +16,7 @@ const onMove = function (event) {
 
   // Only execute API call if cell is empty
   if (event.target.innerHTML === '') {
-    let gameOver = false
+    // let gameOver = false
 
     // console.log($('div.0').text(), $('div.1').text(), $('div.2').text())
     // // Logic to test if game is over!!
@@ -25,17 +26,19 @@ const onMove = function (event) {
 
     // `If` statements to check whose turn it is, swap currentMove after executing API call and updating game board
     if (currentMove === 'x') {
-      api.move(event.target, currentMove)
-        .then(ui.moveSuccess)
-        .catch(ui.moveFail)
       event.target.innerHTML = 'x'
       currentMove = 'o'
-    } else if (currentMove === 'o') {
+      $('#message').text('O\'s turn')
       api.move(event.target, currentMove)
         .then(ui.moveSuccess)
         .catch(ui.moveFail)
+    } else if (currentMove === 'o') {
       event.target.innerHTML = 'o'
       currentMove = 'x'
+      $('#message').text('X\'s turn')
+      api.move(event.target, currentMove)
+        .then(ui.moveSuccess)
+        .catch(ui.moveFail)
     }
   }
 }
