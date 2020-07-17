@@ -31,7 +31,7 @@ const logoutSuccess = function () {
   $('form').trigger('reset')
   store.user = null
   $('#main-menu').show()
-  $('#logout, #new-game, #stats, #show-changepw').hide()
+  $('#logout, #new-game, #stats, #show-changepw, #change-pw').hide()
 }
 const logoutFail = function () {
   $('#message').text('Failed to logout. =(')
@@ -41,11 +41,11 @@ const changepwSuccess = function () {
   $('#message').text('Password changed!')
   $('form').trigger('reset')
   $('#new-game, #logout, #stats, #show-changepw').show()
-  $('#login, #changepw, .back, .pw-back,').hide()
+  $('#login, #changepw, .back, .pw-back').hide()
 }
-const changepwFail = function () {
-  $('#message').text('Failed to change password.')
-}
+// const changepwFail = function () {
+//   $('#message').text('Failed to change password.')
+// }
 
 const loginClick = function () {
   $('#main-menu').hide()
@@ -71,6 +71,7 @@ const pwBack = function () {
   $('#new-game, #logout, #stats, #show-changepw').show()
   $('#login, #changepw, .back, .pw-back').hide()
   $('#message').text('')
+  $('form').trigger('reset')
 }
 
 module.exports = {
@@ -81,7 +82,7 @@ module.exports = {
   logoutSuccess,
   logoutFail,
   changepwSuccess,
-  changepwFail,
+  // changepwFail,
   loginClick,
   signUpClick,
   back,

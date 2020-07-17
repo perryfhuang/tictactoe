@@ -59,6 +59,14 @@ const move = function (event, currentMove) {
     console.log('TicTacToe!!')
     gameOver = true
   }
+  // Logic to detect tie game (all cells filled with no winner)
+  if ($('.0').text() !== '' && $('.1').text() !== '' && $('.2').text() !== '' &&
+      $('.3').text() !== '' && $('.4').text() !== '' && $('.5').text() !== '' &&
+      $('.6').text() !== '' && $('.7').text() !== '' && $('.8').text() !== '') {
+    // Keep gameOver = false
+    console.log('Game is over, it\'s a tie!')
+    gameOver = true
+  }
 
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game._id,

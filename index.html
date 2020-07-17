@@ -15,6 +15,19 @@
       <h1>Tic Tac Toe</h1>
       <p id="message"></p>
 
+      <div class="board container">
+        <div class="row">
+          <div data-index="0" class="0 col-4 cell border-top-0 border-left-0"></div>
+          <div data-index="1" class="1 col-4 cell border-top-0"></div>
+          <div data-index="2" class="2 col-4 cell border-top-0 border-right-0"></div>
+          <div data-index="3" class="3 col-4 cell border-left-0"></div>
+          <div data-index="4" class="4 col-4 cell"></div>
+          <div data-index="5" class="5 col-4 cell border-right-0"></div>
+          <div data-index="6" class="6 col-4 cell border-left-0 border-bottom-0"></div>
+          <div data-index="7" class="7 col-4 cell border-bottom-0"></div>
+          <div data-index="8" class="8 col-4 cell border-right-0 border-bottom-0"></div>
+        </div>
+      </div>
       <!-- main menu start -->
     <div id="main-menu">
       <button id="login-button">Login</button> <br>
@@ -32,13 +45,16 @@
       </form>
       <!--end Sign Up Form -->
 
+      <!-- Show Login form after Login has been clicked on main menu -->
       <form id="login">
         <h2>Login</h2>
         <input name="credentials[email]" type="email" placeholder="Email" value="perryhuang@gmail.com"> <br>
         <input name="credentials[password]" type="password" placeholder="Password" value="pass"> <br>
         <button type="submit">Login</button>
       </form>
+      <!-- End Sign Up Form -->
 
+      <!-- Change PW Form -->
       <form id="changepw">
         <h2>Change Password</h2>
         <input name="passwords[old]" type="password" placeholder="Current Password"> <br>
@@ -46,6 +62,7 @@
         <button type="submit">Submit</button>
       </form>
       <button class="pw-back">Back</button>
+      <!-- End Change PW Form -->
       <button class="back">Back</button>
 
       <button id="new-game">New Game</button> <br>
@@ -54,26 +71,6 @@
 
       <button id="show-changepw">Change Password</button> <br>
 
-      <!-- <form id="changepw">
-        <h2>Change Password</h2>
-        <input name="passwords[old]" type="password" placeholder="Current Password"> <br>
-        <input name="passwords[new]" type="password" placeholder="New Password"> <br>
-        <button type="submit">Submit</button>
-      </form> -->
-
       <button id="logout">Logout</button> <br>
-    <div class="board container">
-      <div class="row">
-        <div data-index="0" class="0 col-4 cell border-top-0 border-left-0"></div>
-        <div data-index="1" class="1 col-4 cell border-top-0"></div>
-        <div data-index="2" class="2 col-4 cell border-top-0 border-right-0"></div>
-        <div data-index="3" class="3 col-4 cell border-left-0"></div>
-        <div data-index="4" class="4 col-4 cell"></div>
-        <div data-index="5" class="5 col-4 cell border-right-0"></div>
-        <div data-index="6" class="6 col-4 cell border-left-0 border-bottom-0"></div>
-        <div data-index="7" class="7 col-4 cell border-bottom-0"></div>
-        <div data-index="8" class="8 col-4 cell border-right-0 border-bottom-0"></div>
-      </div>
-    </div>
     </body>
 </html>
