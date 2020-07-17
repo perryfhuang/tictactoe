@@ -15,6 +15,7 @@ $(() => {
   $('#login').on('submit', authEvents.onLogin)
   $('#logout').on('click', authEvents.onLogout)
   $('#changepw').on('submit', authEvents.onChangepw)
+  $('#stats').on('click', authEvents.stats)
 
   // UI flow/menu click listeners
   $('#login-button').on('click', ui.loginClick)
@@ -26,4 +27,5 @@ $(() => {
   // Game events
   $('#new-game').on('click', gameEvents.onNewGame)
   $('.cell').on('click', gameEvents.onMove)
+  $('#play-menu').on('click', gameEvents.playMenu)
 })

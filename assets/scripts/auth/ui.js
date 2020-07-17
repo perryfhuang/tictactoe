@@ -47,6 +47,17 @@ const changepwSuccess = function () {
 //   $('#message').text('Failed to change password.')
 // }
 
+const getStatsSuccess = function (response) {
+  if(response.games.length === 0) {
+    $('#message').text('You haven\'t played any games yet!')
+  } else {
+  $('#message').text('Total number of games played: ' + response.games.length)
+}
+}
+const getStatsFail = function (response) {
+  $('#message').text('Password changed!')
+}
+
 const loginClick = function () {
   $('#main-menu').hide()
   $('#login, .back').show()
@@ -87,5 +98,7 @@ module.exports = {
   signUpClick,
   back,
   showChangepw,
-  pwBack
+  pwBack,
+  getStatsSuccess,
+  getStatsFail
 }

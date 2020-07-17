@@ -36,10 +36,20 @@ const changepw = function (formData) {
     }
   })
 }
+const getStats = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   signUp,
   login,
   logout,
-  changepw
+  changepw,
+  getStats
 }

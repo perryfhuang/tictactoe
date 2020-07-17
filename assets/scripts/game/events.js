@@ -43,8 +43,14 @@ const onMove = function (event) {
     }
   }
 }
+const playMenu = function () {
+  api.deleteGame()
+    .then(ui.deleteGameSuccess)
+    .catch(ui.deleteGameFail)
+}
 
 module.exports = {
   onNewGame,
-  onMove
+  onMove,
+  playMenu
 }

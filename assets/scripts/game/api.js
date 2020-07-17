@@ -84,8 +84,18 @@ const move = function (event, currentMove) {
     }
   })
 }
+const deleteGame = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.game._id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   newGame,
-  move
+  move,
+  deleteGame
 }

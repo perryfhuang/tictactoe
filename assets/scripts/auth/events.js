@@ -35,10 +35,16 @@ const onChangepw = function (event) {
     .then(ui.changepwSuccess)
     .catch(ui.changepwFail)
 }
+const stats = function (event) {
+  api.getStats()
+    .then(ui.getStatsSuccess)
+    .catch(ui.getStatsFail)
+}
 
 module.exports = {
   onSignUp,
   onLogin,
   onLogout,
-  onChangepw
+  onChangepw,
+  stats
 }

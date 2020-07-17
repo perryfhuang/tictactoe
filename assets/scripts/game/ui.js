@@ -2,7 +2,7 @@
 let store = require('../store')
 
 const newGameSuccess = function (response) {
-  $('.board').show(500)
+  $('.board, #play-menu').show(500)
   $('#main-menu, #stats, #show-changepw, #new-game, #logout').hide()
   $('#message').text('X\'s turn')
 
@@ -77,9 +77,21 @@ const moveSuccess = function (response) {
 const moveFail = function () {
   $('#message').text('Failed to make that move.')
 }
+
+const deleteGameSuccess = function () {
+  $('#message').text('Returned to Main Menu and deleted current game!')
+  $('.board, #play-menu').hide()
+  $('#new-game, #stats, #show-changepw, #logout').show()
+  $('.0 ,.1, .2, .3, .4, .5, .6, .7, .8').text('')
+}
+const deleteGameFail = function () {
+  $('#message').text('Could not move to main menu or delete current game.')
+}
 module.exports = {
   newGameSuccess,
   newGameFail,
   moveSuccess,
-  moveFail
+  moveFail,
+  deleteGameSuccess,
+  deleteGameFail
 }
