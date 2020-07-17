@@ -8,6 +8,7 @@
 const authEvents = require('./auth/events')
 const gameEvents = require('./game/events')
 const ui = require('./auth/ui')
+const store = require('./store')
 
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -15,7 +16,7 @@ $(() => {
   $('#logout').on('click', authEvents.onLogout)
   $('#changepw').on('submit', authEvents.onChangepw)
 
-  $('#login-button').on('click', ui.onLoginClick)
+  $('#login-button').on('click', ui.loginClick)
 
   $('#new-game').on('click', gameEvents.onNewGame)
 

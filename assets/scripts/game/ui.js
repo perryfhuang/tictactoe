@@ -3,6 +3,7 @@ let store = require('../store')
 
 const newGameSuccess = function (response) {
   $('.board').show(500)
+  $('#new-game, #logout').hide()
   $('.all-auth, #main-menu').hide()
   $('#message').text('X\'s turn')
 
@@ -16,6 +17,11 @@ const moveSuccess = function (response) {
   console.log(response)
   if (response.game.over === true) {
     $('#message').text('Game Over!')
+    $('.cell').off('click')
+  }
+  if (response.game.cells.includes('') === false) {
+    $('#message').text('It\'s a tie!')
+    $('.cell').off('click')
   }
   // else {
   //   $('#message').text('Move successful')
@@ -24,7 +30,6 @@ const moveSuccess = function (response) {
 const moveFail = function () {
   $('#message').text('Failed to make that move.')
 }
-
 module.exports = {
   newGameSuccess,
   newGameFail,

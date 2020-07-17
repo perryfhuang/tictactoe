@@ -16,6 +16,8 @@ const loginSuccess = function (response) {
   store.user = response.user
   $('form').trigger('reset')
 
+  $('#new-game, #logout').show()
+  $('#login').hide()
   console.log(store)
 }
 const loginFail = function () {
@@ -42,9 +44,15 @@ const changepwFail = function () {
   $('#message').text('Failed to change password.')
 }
 
-const onLoginClick = function () {
-  // $('#main-menu').hide()
-  $('.all-auth').show()
+// const onLoginClick = function () {
+//   // $('#main-menu').hide()
+//   $('.all-auth').show()
+// }
+
+const loginClick = function () {
+  $('#main-menu').hide()
+  $('#login').show()
+  // $('.all-auth').show()
 }
 
 module.exports = {
@@ -56,5 +64,5 @@ module.exports = {
   logoutFail,
   changepwSuccess,
   changepwFail,
-  onLoginClick
+  loginClick
 }

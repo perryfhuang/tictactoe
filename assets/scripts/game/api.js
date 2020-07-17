@@ -16,6 +16,8 @@ const move = function (event, currentMove) {
   // console.log(event.dataset.index)
   // console.log(store)
   // console.log(store.user._id)
+
+  // Game over logic
   let gameOver = false
   if ($('.0').text() === $('.1').text() && $('.0').text() === $('.2').text() &&
    $('.0').text() !== '' && $('.1').text() !== '' && $('.2').text() !== '') {
@@ -57,7 +59,7 @@ const move = function (event, currentMove) {
     console.log('TicTacToe!!')
     gameOver = true
   }
-  // console.log(gameOver)
+
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
