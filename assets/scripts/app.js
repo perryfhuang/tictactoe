@@ -8,17 +8,22 @@
 const authEvents = require('./auth/events')
 const gameEvents = require('./game/events')
 const ui = require('./auth/ui')
-const store = require('./store')
 
 $(() => {
+  // Auth event listeners
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#login').on('submit', authEvents.onLogin)
   $('#logout').on('click', authEvents.onLogout)
   $('#changepw').on('submit', authEvents.onChangepw)
 
+  // UI flow/menu click listeners
   $('#login-button').on('click', ui.loginClick)
+  $('#sign-up-button').on('click', ui.signUpClick)
+  $('.back').on('click', ui.back)
+  $('#show-changepw').on('click', ui.showChangepw)
+  $('.pw-back').on('click', ui.pwBack)
 
+  // Game events
   $('#new-game').on('click', gameEvents.onNewGame)
-
   $('.cell').on('click', gameEvents.onMove)
 })
