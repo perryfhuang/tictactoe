@@ -72,6 +72,9 @@ const moveSuccess = function (response) {
     }
     // Turn off cell click listeners if game is over
     $('.cell').off('click')
+
+    // Bring up modal on game over for option to 'Play Again' or go to 'Main Menu'
+    $('#gameOver').modal('show')
   }
 }
 const moveFail = function () {

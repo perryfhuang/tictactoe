@@ -2,7 +2,23 @@
 
 body {
   text-align: center;
+  background-image: url();
+  background-repeat: repeat;
+  background-size: cover;
 }
+
+button {
+  margin: 5px;
+}
+
+#modal-header {
+  text-align: center;
+}
+
+// .d-block {
+//   display: block;
+//   text-align: center;
+// }
 
 #message {
   white-space: pre-wrap;
@@ -14,10 +30,13 @@ body {
 }
 
 .board {
-  width: 450px;
+  width: 500px;
   display: none;
   .cell {
     border: 5px solid black;
-    height: 150px;
+    height: calc(500px /3);
+    font-size: 150px;
+    text-align: center;
+    vertical-align: middle;
   }
 }
