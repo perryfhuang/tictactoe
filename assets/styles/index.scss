@@ -17,10 +17,22 @@ input {
   margin: 7.5px;
 }
 
-#modal-header {
+.modal-title {
+  text-align: center;
+  color: black;
+}
+.modal-content {
   text-align: center;
 }
-
+.modal-body {
+  color: black;
+}
+.modal-footer {
+ flex-direction: column;
+}
+.game-over {
+  display: block;
+}
 // .d-block {
 //   display: block;
 //   text-align: center;
