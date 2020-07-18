@@ -38,7 +38,7 @@ input {
 //   text-align: center;
 // }
 
-#main-menu, #sign-up, #login, #new-game, #changepw, #logout, #stats, #show-changepw, #play-menu, .back, .pw-back {
+#main-menu, #sign-up, #login, #new-game, #changepw, #logout, #stats, #show-changepw, #play-menu, .back, .pw-back, .instructions {
   // visibility: hidden;
   display: none;
 }
@@ -65,6 +65,8 @@ input {
 
 .board {
   width: 500px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   display: none;
   .cell {
     border: 5px solid white;

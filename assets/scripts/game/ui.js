@@ -3,7 +3,7 @@ const store = require('../store')
 const gameEvents = require('./events')
 
 const newGameSuccess = function (response) {
-  $('.board, #play-menu').show(500)
+  $('.board, #play-menu, .instructions').show(500)
   $('#main-menu, #stats, #show-changepw, #new-game, #logout').hide()
   $('#message').text('X\'s turn')
 
@@ -100,7 +100,7 @@ const moveFail = function () {
 
 const deleteGameSuccess = function () {
   $('#message').text('Returned to Main Menu and deleted current game!')
-  $('.board, #play-menu').hide()
+  $('.board, #play-menu, .instructions').hide()
   $('#new-game, #stats, #show-changepw, #logout').fadeIn(500)
   $('.0 ,.1, .2, .3, .4, .5, .6, .7, .8').text('')
 }
@@ -110,10 +110,11 @@ const deleteGameFail = function () {
 
 const gameOverPlayMenu = function () {
   console.log('going to main menu')
-  $('.board, #play-menu').hide()
+  $('.board, #play-menu, .instructions').hide()
   $('#new-game, #stats, #show-changepw, #logout').fadeIn(500)
   $('#message').text('')
 }
+
 module.exports = {
   newGameSuccess,
   newGameFail,
@@ -123,5 +124,5 @@ module.exports = {
   deleteGameFail,
   playAgainSuccess,
   playAgainFail,
-  gameOverPlayMenu
+  gameOverPlayMenu,
 }
