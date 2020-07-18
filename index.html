@@ -13,7 +13,7 @@
     </head>
     <body>
       <h1>Tic Tac Toe</h1>
-      <p id="message"></p>
+      <p id="message">Test<span class="cursor">&nbsp;</span></p>
       <div class="board container">
         <div class="row">
           <div data-index="0" class="0 col-4 cell border-top-0 border-left-0"></div>
@@ -27,11 +27,11 @@
           <div data-index="8" class="8 col-4 cell border-right-0 border-bottom-0"></div>
         </div>
       </div>
-      <button id="play-menu" class="btn btn-outline-dark">Main Menu</button>
+      <button id="play-menu" class="btn btn-primary">Main Menu</button>
       <!-- main menu start -->
     <div id="main-menu">
-      <button id="login-button" class="btn btn-outline-dark">Login</button> <br>
-      <button id="sign-up-button" class="btn btn-outline-dark">Sign Up</button>
+      <button id="login-button" class="btn btn-primary">Login</button> <br>
+      <button id="sign-up-button" class="btn btn-primary">Sign Up</button>
     </div>
       <!-- main menu end -->
 
@@ -41,7 +41,7 @@
         <input name="credentials[email]" type="email" placeholder="Email"/> <br>
         <input name="credentials[password]" type="password" placeholder="Password"/> <br>
         <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password"/> <br>
-        <button type="submit" class="btn btn-outline-dark">Sign Up</button>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
       </form>
       <!--end Sign Up Form -->
 
@@ -50,7 +50,7 @@
         <h2>Login</h2>
         <input name="credentials[email]" type="email" placeholder="Email" value="perryhuang@gmail.com"> <br>
         <input name="credentials[password]" type="password" placeholder="Password" value="pass"> <br>
-        <button type="submit" class="btn btn-outline-dark">Login</button>
+        <button type="submit" class="btn btn-primary">Login</button>
       </form>
       <!-- End Sign Up Form -->
 
@@ -59,19 +59,19 @@
         <h2>Change Password</h2>
         <input name="passwords[old]" type="password" placeholder="Current Password"> <br>
         <input name="passwords[new]" type="password" placeholder="New Password"> <br>
-        <button type="submit" class="btn btn-outline-dark">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-      <button class="pw-back btn btn-outline-dark">Back</button>
+      <button class="pw-back btn btn-primary">Back</button>
       <!-- End Change PW Form -->
-      <button class="back btn btn-outline-dark">Back</button>
+      <button class="back btn btn-primary">Back</button>
 
-      <button id="new-game" data-toggle="modal" data-target="#instructions" class="btn btn-outline-dark">New Game</button> <br>
+      <button id="new-game" data-toggle="modal" data-target="#instructions" class="btn btn-primary">New Game</button> <br>
 
-      <button id="stats" class="btn btn-outline-dark">Player Stats</button> <br>
+      <button id="stats" class="btn btn-primary">Player Stats</button> <br>
 
-      <button id="show-changepw" class="btn btn-outline-dark">Change Password</button> <br>
+      <button id="show-changepw" class="btn btn-primary">Change Password</button> <br>
 
-      <button id="logout" class="btn btn-outline-dark">Logout</button> <br>
+      <button id="logout" class="btn btn-primary">Logout</button> <br>
 
       <!-- How To Play modal -->
       <div class="modal fade" id="instructions" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -86,7 +86,7 @@
               Good luck and have fun!
             </div>
             <div class="modal-footer d-flex justify-content-center">
-              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -103,8 +103,8 @@
               X wins!
             </div>
             <div class="modal-footer d-flex justify-content-center">
-              <button type="button" class="btn btn-outline-dark .btn-block" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-outline-dark .btn-block" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary .btn-block" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary .btn-block" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>

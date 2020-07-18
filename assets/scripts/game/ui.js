@@ -84,7 +84,7 @@ const moveFail = function () {
 const deleteGameSuccess = function () {
   $('#message').text('Returned to Main Menu and deleted current game!')
   $('.board, #play-menu').hide()
-  $('#new-game, #stats, #show-changepw, #logout').show()
+  $('#new-game, #stats, #show-changepw, #logout').fadeIn(500)
   $('.0 ,.1, .2, .3, .4, .5, .6, .7, .8').text('')
 }
 const deleteGameFail = function () {

@@ -5,7 +5,7 @@ const signUpSuccess = function () {
   $('#message').text('Account created!\nGo out there and dominate!')
   $('form').trigger('reset')
 
-  $('#main-menu').show()
+  $('#main-menu').fadeIn(500)
   $('#sign-up, .back').hide()
 }
 const signUpFail = function (error) {
@@ -18,7 +18,7 @@ const loginSuccess = function (response) {
   $('form').trigger('reset')
   store.user = response.user
 
-  $('#new-game, #logout, #stats, #show-changepw').show()
+  $('#new-game, #logout, #stats, #show-changepw').fadeIn(500)
   $('#login, .back').hide()
   console.log(store)
 }
@@ -30,7 +30,7 @@ const logoutSuccess = function () {
   $('#message').text('Succesfully logged out.\nCya later!')
   $('form').trigger('reset')
   store.user = null
-  $('#main-menu').show()
+  $('#main-menu').fadeIn(500)
   $('#logout, #new-game, #stats, #show-changepw, #change-pw').hide()
 }
 const logoutFail = function () {
@@ -40,7 +40,7 @@ const logoutFail = function () {
 const changepwSuccess = function () {
   $('#message').text('Password changed!')
   $('form').trigger('reset')
-  $('#new-game, #logout, #stats, #show-changepw').show()
+  $('#new-game, #logout, #stats, #show-changepw').fadeIn(500)
   $('#login, #changepw, .back, .pw-back').hide()
 }
 // const changepwFail = function () {
@@ -60,26 +60,26 @@ const getStatsFail = function (response) {
 
 const loginClick = function () {
   $('#main-menu').hide()
-  $('#login, .back').show()
+  $('#login, .back').fadeIn(500)
   $('#message').text('')
 }
 const signUpClick = function () {
   $('#main-menu').hide()
-  $('#sign-up, .back').show()
+  $('#sign-up, .back').fadeIn(500)
   $('#message').text('')
 }
 const back = function () {
-  $('#main-menu').show()
+  $('#main-menu').fadeIn(500)
   $('#login, #sign-up, .back').hide()
   $('#message').text('')
 }
 const showChangepw = function () {
-  $('#changepw, .pw-back').show()
+  $('#changepw, .pw-back').fadeIn(500)
   $('#new-game, #stats, #logout, #show-changepw').hide()
   $('#message').text('')
 }
 const pwBack = function () {
-  $('#new-game, #logout, #stats, #show-changepw').show()
+  $('#new-game, #logout, #stats, #show-changepw').fadeIn(500)
   $('#login, #changepw, .back, .pw-back').hide()
   $('#message').text('')
   $('form').trigger('reset')

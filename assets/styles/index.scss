@@ -5,10 +5,16 @@ body {
   background-image: url();
   background-repeat: repeat;
   background-size: cover;
+  background-color: black;
+  color: white;
 }
 
 button {
   margin: 5px;
+  width: 170px;
+}
+input {
+  margin: 7.5px;
 }
 
 #modal-header {
@@ -20,20 +26,36 @@ button {
 //   text-align: center;
 // }
 
+#main-menu, #sign-up, #login, #new-game, #changepw, #logout, #stats, #show-changepw, #play-menu, .back, .pw-back {
+  // visibility: hidden;
+  display: none;
+}
+
 #message {
   white-space: pre-wrap;
 }
-
-#sign-up, #login, #new-game, #changepw, #logout, #stats, #show-changepw, #play-menu, .back, .pw-back {
-  // visibility: hidden;
-  display: none;
+// .container {
+//   display: flex;
+//   text-align: center;
+//   #message {
+//     white-space: pre-wrap;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 30px;
+  background-color: #ccc;
+  // padding-top: 20px;
 }
 
 .board {
   width: 500px;
   display: none;
   .cell {
-    border: 5px solid black;
+    border: 5px solid white;
     height: calc(500px /3);
     font-size: 150px;
     text-align: center;

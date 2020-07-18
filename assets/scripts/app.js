@@ -10,6 +10,8 @@ const gameEvents = require('./game/events')
 const ui = require('./auth/ui')
 
 $(() => {
+  $('#main-menu').slideDown(500)
+
   // Auth event listeners
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#login').on('submit', authEvents.onLogin)
