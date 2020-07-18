@@ -1,5 +1,6 @@
 'use strict'
-let store = require('../store')
+const store = require('../store')
+const gameEvents = require('./events')
 
 const newGameSuccess = function (response) {
   $('.board, #play-menu').show(500)
@@ -9,6 +10,22 @@ const newGameSuccess = function (response) {
   store.game = response.game
 }
 const newGameFail = function () {
+  $('#message').text('Failed to create new game =(')
+}
+
+const playAgainSuccess = function (response) {
+  $('.0 ,.1, .2, .3, .4, .5, .6, .7, .8').text('')
+  $('.board, #play-menu').hide(500)
+  $('.board, #play-menu').show(500)
+  $('#main-menu, #stats, #show-changepw, #new-game, #logout').hide()
+  $('#message').text('X\'s turn')
+
+  store.game = response.game
+  console.log(store)
+  // Turn click listeners BACK ON for the cells after Play Again is successful
+  $('.cell').on('click', gameEvents.onMove)
+}
+const playAgainFail = function () {
   $('#message').text('Failed to create new game =(')
 }
 
@@ -90,11 +107,21 @@ const deleteGameSuccess = function () {
 const deleteGameFail = function () {
   $('#message').text('Could not move to main menu or delete current game.')
 }
+
+const gameOverPlayMenu = function () {
+  console.log('going to main menu')
+  $('.board, #play-menu').hide()
+  $('#new-game, #stats, #show-changepw, #logout').fadeIn(500)
+  $('#message').text('')
+}
 module.exports = {
   newGameSuccess,
   newGameFail,
   moveSuccess,
   moveFail,
   deleteGameSuccess,
-  deleteGameFail
+  deleteGameFail,
+  playAgainSuccess,
+  playAgainFail,
+  gameOverPlayMenu
 }

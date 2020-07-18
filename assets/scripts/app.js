@@ -8,6 +8,7 @@
 const authEvents = require('./auth/events')
 const gameEvents = require('./game/events')
 const ui = require('./auth/ui')
+const gameui = require('./game/ui')
 
 $(() => {
   $('#main-menu').slideDown(500)
@@ -30,4 +31,7 @@ $(() => {
   $('#new-game').on('click', gameEvents.onNewGame)
   $('.cell').on('click', gameEvents.onMove)
   $('#play-menu').on('click', gameEvents.playMenu)
+
+  $('#play-again').on('click', gameEvents.onPlayAgain)
+  $('#game-over-play-menu').on('click', gameui.gameOverPlayMenu)
 })

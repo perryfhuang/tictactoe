@@ -9,6 +9,12 @@ const onNewGame = function (event) {
     .catch(ui.newGameFail)
 }
 
+const onPlayAgain = function (event) {
+  api.newGame()
+    .then(ui.playAgainSuccess)
+    .catch(ui.playAgainFail)
+}
+
 // Declare first move token
 let currentMove = 'x'
 const onMove = function (event) {
@@ -52,5 +58,6 @@ const playMenu = function () {
 module.exports = {
   onNewGame,
   onMove,
-  playMenu
+  playMenu,
+  onPlayAgain
 }

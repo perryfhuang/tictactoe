@@ -11,6 +11,15 @@ const newGame = function () {
     }
   })
 }
+const playAgain = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 const move = function (event, currentMove) {
   // console.log(event.dataset.index)
@@ -97,5 +106,6 @@ const deleteGame = function () {
 module.exports = {
   newGame,
   move,
-  deleteGame
+  deleteGame,
+  playAgain
 }
