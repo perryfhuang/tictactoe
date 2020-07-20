@@ -2,21 +2,6 @@
 const store = require('../store')
 const gameEvents = require('./events')
 
-const typedText = document.querySelector('#message')
-const typingDelay = 200
-// const eraseDelay = 75
-// const newTextDelay = 2000
-let charIndex = 0
-
-function type (str) {
-  typedText.textContent = ''
-  if (charIndex < str.length) {
-    typedText.textContent += str.charAt(charIndex)
-    charIndex++
-    setTimeout(type, typingDelay)
-  }
-}
-
 const newGameSuccess = function (response) {
   $(' .instructions, .board, #play-menu').show(500)
   $('#main-menu, #stats, #show-changepw, #new-game, #logout').hide()
@@ -126,7 +111,7 @@ const moveFail = function () {
 }
 
 const deleteGameSuccess = function () {
-  $('#message').text('Returned to Main Menu and deleted current game!')
+  $('#message').text('Returned to Main Menu and deleted current game!').fadeIn(2000)
   $('.board, #play-menu, .instructions').hide()
   $('#new-game, #stats, #show-changepw, #logout').fadeIn(500)
   $('.0 ,.1, .2, .3, .4, .5, .6, .7, .8').text('')

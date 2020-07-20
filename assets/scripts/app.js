@@ -10,6 +10,7 @@ const gameEvents = require('./game/events')
 const ui = require('./auth/ui')
 
 $(() => {
+  // Variables for 'typing title' effect
   const cursor = document.querySelector('.cursor')
   const typedText = document.querySelector('.typed-text')
   const title = 'Tic Tac Toe'
@@ -20,21 +21,25 @@ $(() => {
 
   function type () {
     if (charIndex < title.length) {
+      if (!cursor.classList.contains('typing')) cursor.classList.add('typing')
       typedText.textContent += title.charAt(charIndex)
       charIndex++
       setTimeout(type, typingDelay)
     } else {
       // erase
+      cursor.classList.remove('typing')
       setTimeout(erase, newTextDelay)
     }
   }
 
   function erase () {
     if (charIndex > 0) {
+      if (!cursor.classList.contains('typing')) cursor.classList.add('typing')
       typedText.textContent = title.substring(0, charIndex - 1)
       charIndex--
       setTimeout(erase, eraseDelay)
     } else {
+      cursor.classList.remove('typing')
       setTimeout(type, typingDelay)
     }
   }

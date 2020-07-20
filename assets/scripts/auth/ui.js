@@ -51,7 +51,7 @@ const getStatsSuccess = function (response) {
   if (response.games.length === 0) {
     $('#message').text('You haven\'t played any games yet!')
   } else {
-  $('#message').text('Total number of games played: ' + response.games.length)
+  $('#message').text('Total number of games played: ' + response.games.length).fadeIn(2000)
 }
 }
 const getStatsFail = function (response) {
