@@ -104,7 +104,6 @@ const moveSuccess = function (response) {
 
     // Bring up modal on game over for option to 'Play Again' or go to 'Main Menu'
     $('#gameOver').modal('show')
-
   }
 }
 const moveFail = function () {

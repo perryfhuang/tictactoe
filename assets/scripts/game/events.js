@@ -6,17 +6,21 @@ const onNewGame = function (event) {
   api.newGame()
     .then(ui.newGameSuccess)
     .catch(ui.newGameFail)
+  if ($._data($('.cell')[0], 'events') === undefined) {
+    $('.cell').on('click', onMove)
+    console.log('Successfully attached click listeners.')
+  }
 }
 
 const onPlayAgain = function (event) {
   api.newGame()
     .then(ui.playAgainSuccess)
     .catch(ui.playAgainFail)
-
-  // Turn click listeneres for game board BACK ON
-  $('.cell').on('click', onMove)
-  console.log('Play Again successful through events.js')
-
+  // Turn click listeners for game board BACK ON if it is off using the _data function in jquery (checking to see if an event listener exists)
+  if ($._data($('.cell')[0], 'events') === undefined) {
+    $('.cell').on('click', onMove)
+    console.log('Play Again successful through events.js')
+  }
   // Set first move token as 'X' on successful play again API call
   currentMove = 'x'
   console.log('Current move is: ' + currentMove + 'at playAgainSuccess')
@@ -34,7 +38,6 @@ const onMove = function (event) {
   // Message to client if cell is taken
   if (event.target.innerHTML !== '') {
     $('#message').text('Cell is taken! Try again.')
-    console.log('Why is this happening?')
   }
 
   // Only execute API call if cell is empty
@@ -62,12 +65,12 @@ const playMenu = function () {
   api.deleteGame()
     .then(ui.deleteGameSuccess)
     .catch(ui.deleteGameFail)
-  $('.cell').on('click', onMove)
+  // $('.cell').on('click', onMove)
   currentMove = 'x'
 }
 const gameOverPlayMenu = function () {
-  $('.cell').on('click', onMove)
-  currentMove = 'x'
+  // $('.cell').on('click', onMove)
+  // currentMove = 'x'
   ui.gameOverPlayMenu()
 }
 module.exports = {
