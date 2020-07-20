@@ -2,21 +2,16 @@
 
 body {
   text-align: center;
-  background-image: url();
-  background-repeat: repeat;
-  background-size: cover;
+  // background-image: url();
+  // background-repeat: repeat;
+  // background-size: cover;
   background-color: black;
   color: #22b455;
 }
+
 h1 {
-  margin-top: 100px;
+  margin-top: 10vh;
 }
-// canvas {
-// display: block;
-// position:absolute;
-// top:0;
-// left:0;
-// }
 
 button {
   margin: 5px;
@@ -59,6 +54,7 @@ color: #020204;
 input {
   margin: 7.5px;
 }
+
 .modal {
   background-color: black;
 }
@@ -85,7 +81,6 @@ input {
 // }
 
 #main-menu, #sign-up, #login, #new-game, #changepw, #logout, #stats, #show-changepw, #play-menu, .back, .pw-back, .instructions {
-  // visibility: hidden;
   display: none;
 }
 
@@ -126,5 +121,11 @@ input {
     font-size: 150px;
     padding-bottom: 20px;
     line-height: 125px;
+    text-shadow: 1px 1px #D3D3D3;
+    text-shadow: 2px 2px white;
+    user-select: none;
+    &:hover {
+      background-color: #204829;
+    }
   }
 }

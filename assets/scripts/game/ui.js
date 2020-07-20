@@ -3,7 +3,7 @@ const store = require('../store')
 const gameEvents = require('./events')
 
 const newGameSuccess = function (response) {
-  $('.board, #play-menu, .instructions').show(500)
+  $(' .instructions, .board, #play-menu').show(500)
   $('#main-menu, #stats, #show-changepw, #new-game, #logout').hide()
   $('#message').text('X\'s turn')
   store.game = response.game
