@@ -2,6 +2,21 @@
 const store = require('../store')
 const gameEvents = require('./events')
 
+const typedText = document.querySelector('#message')
+const typingDelay = 200
+// const eraseDelay = 75
+// const newTextDelay = 2000
+let charIndex = 0
+
+function type (str) {
+  typedText.textContent = ''
+  if (charIndex < str.length) {
+    typedText.textContent += str.charAt(charIndex)
+    charIndex++
+    setTimeout(type, typingDelay)
+  }
+}
+
 const newGameSuccess = function (response) {
   $(' .instructions, .board, #play-menu').show(500)
   $('#main-menu, #stats, #show-changepw, #new-game, #logout').hide()

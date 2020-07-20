@@ -8,9 +8,37 @@
 const authEvents = require('./auth/events')
 const gameEvents = require('./game/events')
 const ui = require('./auth/ui')
-const gameui = require('./game/ui')
 
 $(() => {
+  const cursor = document.querySelector('.cursor')
+  const typedText = document.querySelector('.typed-text')
+  const title = 'Tic Tac Toe'
+  const typingDelay = 200
+  const eraseDelay = 75
+  const newTextDelay = 2000
+  let charIndex = 0
+
+  function type () {
+    if (charIndex < title.length) {
+      typedText.textContent += title.charAt(charIndex)
+      charIndex++
+      setTimeout(type, typingDelay)
+    } else {
+      // erase
+      setTimeout(erase, newTextDelay)
+    }
+  }
+
+  function erase () {
+    if (charIndex > 0) {
+      typedText.textContent = title.substring(0, charIndex - 1)
+      charIndex--
+      setTimeout(erase, eraseDelay)
+    } else {
+      setTimeout(type, typingDelay)
+    }
+  }
+  setTimeout(type, 750)
 
   $('#main-menu').fadeIn(500)
 

@@ -2,15 +2,24 @@
 
 body {
   text-align: center;
+  // vertical-align: middle
+  // line-height: calc(40vw / 3);
+
   // background-image: url();
   // background-repeat: repeat;
   // background-size: cover;
   background-color: black;
   color: #22b455;
+  font-family: 'Red Rose', cursive;
 }
 
 h1 {
   margin-top: 10vh;
+  font-family: 'Red Rose', cursive;
+}
+
+#taken {
+  color: #92e5a1;
 }
 
 button {
@@ -61,7 +70,7 @@ input {
 
 .modal-title {
   text-align: center;
-  color: black;
+  color: #22b455;
 }
 .modal-content {
   text-align: center;
@@ -100,27 +109,35 @@ input {
 .cursor {
   display: inline-block;
   width: 3px;
-  height: 30px;
   background-color: #22b455;
+  animation: blink 1s infinite;
+  margin-left: 0.1rem;
   // padding-top: 20px;
 }
-
-.parent {
-  display: flex;
-  align-items: center;
+.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% { background-color: #22b455; }
+  49% { bavkgorund-color: #22b455; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100% { background-color: #22b455;}
 }
 
 .board {
-  width: 500px;
+  height: calc(40vw);
+  width: calc(40vw);
   margin-top: 10px;
   margin-bottom: 30px;
   display: none;
   .cell {
     border: 5px solid #92e5a1;
-    height: calc(500px /3);
-    font-size: 150px;
-    padding-bottom: 20px;
-    line-height: 125px;
+    height: calc(40vw / 3);
+    font-size: calc(40vw / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-shadow: 1px 1px #D3D3D3;
     text-shadow: 2px 2px white;
     user-select: none;

@@ -6,6 +6,8 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Red+Rose&display=swap" rel="stylesheet">
+
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -15,9 +17,10 @@
       <!-- <canvas id="canvas">Canvas is not supported in your browser.</canvas>
       <canvas id="canvas2">Canvas is not supported in your browser.</canvas> -->
 
-      <h1>Tic Tac Toe</h1>
-      <p id="message">Test<span class="cursor">&nbsp;</span></p>
-      <div class="board container">
+      <h1><span class="typed-text"></span><span  class="cursor">&nbsp;</span></h1>
+      <p id="message"></p>
+      <p id="taken"></p>
+      <section class="board container">
         <div class="row parent">
           <div data-index="0" class="0 col-4 cell border-top-0 border-left-0"></div>
           <div data-index="1" class="1 col-4 cell border-top-0"></div>
@@ -29,7 +32,7 @@
           <div data-index="7" class="7 col-4 cell border-bottom-0"></div>
           <div data-index="8" class="8 col-4 cell border-right-0 border-bottom-0"></div>
         </div>
-      </div>
+      </section>
 
       <button class="instructions btn btn-primary" data-toggle="modal" data-target="#instructions">How To Play</button><br>
       <button id="play-menu" class="btn btn-primary">Main Menu</button>
