@@ -15,7 +15,7 @@
       <h1>Tic Tac Toe</h1>
       <p id="message">Test<span class="cursor">&nbsp;</span></p>
       <div class="board container">
-        <div class="row">
+        <div class="row parent">
           <div data-index="0" class="0 col-4 cell border-top-0 border-left-0"></div>
           <div data-index="1" class="1 col-4 cell border-top-0"></div>
           <div data-index="2" class="2 col-4 cell border-top-0 border-right-0"></div>
@@ -77,7 +77,7 @@
       <button id="logout" class="btn btn-primary">Logout</button> <br>
 
       <!-- How To Play modal -->
-      <div class="modal fade" id="instructions" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade" data-backdrop="static" data-keyboard="false" id="instructions" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header text-center d-block">
@@ -94,7 +94,7 @@
         </div>
       </div>
 
-      <div class="modal fade" id="gameOver" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade" data-backdrop="static" data-keyboard="false" id="gameOver" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header text-center d-block">

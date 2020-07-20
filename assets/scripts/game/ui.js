@@ -33,62 +33,78 @@ const moveSuccess = function (response) {
     const cells = response.game.cells
     if (response.game.cells.includes('') === false) {
       $('#message').text('It\'s a tie!')
+      $('#game-over-msg').text('It\'s a tie!')
     }
     if (cells[0] === 'x' && cells[0] === cells[1] && cells[0] === cells[2]) {
       $('#message').text('X wins by first row!')
+      $('#game-over-msg').text('X wins by first row!')
     }
     if (cells[0] === 'o' && cells[0] === cells[1] && cells[0] === cells[2]) {
       $('#message').text('O wins by first row!')
+      $('#game-over-msg').text('O wins by first row!')
     }
     if (cells[3] === 'x' && cells[3] === cells[4] && cells[3] === cells[5]) {
       $('#message').text('X wins by second row!')
+      $('#game-over-msg').text('X wins by second row!')
     }
     if (cells[3] === 'o' && cells[3] === cells[4] && cells[3] === cells[5]) {
       $('#message').text('O wins by second row!')
+      $('#game-over-msg').text('O wins by second row!')
     }
     if (cells[6] === 'x' && cells[6] === cells[7] && cells[6] === cells[8]) {
       $('#message').text('X wins by third row!')
+      $('#game-over-msg').text('X wins by third row!')
     }
     if (cells[6] === 'o' && cells[6] === cells[7] && cells[6] === cells[8]) {
       $('#message').text('O wins  by third row!')
+      $('#game-over-msg').text('O wins  by third row!')
     }
     if (cells[0] === 'x' && cells[0] === cells[3] && cells[0] === cells[6]) {
       $('#message').text('X wins by first column!')
-      console.log('X wins by first column.')
+      $('#game-over-msg').text('X wins by first column!')
     }
     if (cells[0] === 'o' && cells[0] === cells[3] && cells[0] === cells[6]) {
       $('#message').text('O wins by first column!')
-      console.log('O wins by first column.')
+      $('#game-over-msg').text('O wins by first column!')
     }
     if (cells[1] === 'x' && cells[1] === cells[4] && cells[1] === cells[7]) {
       $('#message').text('X wins by second column!')
+      $('#game-over-msg').text('X wins by second column!')
     }
     if (cells[1] === 'o' && cells[1] === cells[4] && cells[1] === cells[7]) {
       $('#message').text('O wins by second column!')
+      $('#game-over-msg').text('O wins by second column!')
     }
     if (cells[2] === 'x' && cells[2] === cells[5] && cells[2] === cells[8]) {
       $('#message').text('X wins by third column!')
+      $('#game-over-msg').text('X wins by third column!')
     }
     if (cells[2] === 'o' && cells[2] === cells[5] && cells[2] === cells[8]) {
       $('#message').text('O wins by third column!')
+      $('#game-over-msg').text('O wins by third column!')
     }
     if (cells[0] === 'x' && cells[0] === cells[4] && cells[0] === cells[8]) {
       $('#message').text('X wins by diagonal!')
+      $('#game-over-msg').text('X wins by diagonal!')
     }
     if (cells[0] === 'o' && cells[0] === cells[4] && cells[0] === cells[8]) {
       $('#message').text('O wins by diagonal!')
+      $('#game-over-msg').text('O wins by diagonal!')
     }
     if (cells[2] === 'x' && cells[2] === cells[4] && cells[2] === cells[6]) {
       $('#message').text('X wins by diagonal!')
+      $('#game-over-msg').text('X wins by diagonal!')
     }
     if (cells[2] === 'o' && cells[2] === cells[4] && cells[2] === cells[6]) {
       $('#message').text('O wins by diagonal!')
+      $('#game-over-msg').text('O wins by diagonal!')
     }
     // Turn off cell click listeners if game is over
     $('.cell').off('click')
 
     // Bring up modal on game over for option to 'Play Again' or go to 'Main Menu'
     $('#gameOver').modal('show')
+
   }
 }
 const moveFail = function () {

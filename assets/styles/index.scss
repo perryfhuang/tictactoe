@@ -16,6 +16,11 @@ button {
 
 input[type=text], input[type=password], input[type=email] {
   width: 190px;
+  background-color: #D3D3D3;
+}
+
+#login, #changepw {
+  color: #92e5a1
 }
 
 .btn, .btn-primary {
@@ -77,6 +82,7 @@ input {
 
 #message {
   white-space: pre-wrap;
+  color: #92e5a1;
 }
 // .container {
 //   display: flex;
@@ -95,16 +101,21 @@ input {
   // padding-top: 20px;
 }
 
+.parent {
+  display: flex;
+  align-items: center;
+}
+
 .board {
   width: 500px;
   margin-top: 10px;
   margin-bottom: 30px;
   display: none;
   .cell {
-    border: 5px solid #22b455;
+    border: 5px solid #92e5a1;
     height: calc(500px /3);
     font-size: 150px;
-    text-align: center;
-    vertical-align: middle;
+    padding-bottom: 20px;
+    line-height: 125px;
   }
 }
