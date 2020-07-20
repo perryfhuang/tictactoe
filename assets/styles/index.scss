@@ -6,15 +6,47 @@ body {
   background-repeat: repeat;
   background-size: cover;
   background-color: black;
-  color: white;
+  color: #22b455;
 }
 
 button {
   margin: 5px;
   width: 170px;
 }
+
+input[type=text], input[type=password], input[type=email] {
+  width: 190px;
+}
+
+.btn, .btn-primary {
+  background-color: #22b455;
+  border-color: #22b455;
+  color: black;
+}
+
+.btn:hover, .btn-primary:hover {
+  background-color: #204829;
+  border-color: #204829;
+  color: #020204;
+}
+
+.btn:focus, .btn-primary:focus {
+  background-color: #204829;
+  border-color: #204829;
+  color: #020204;
+}
+
+.btn:active, .btn-primary:active {
+background-color: #204829;
+border-color: #204829;
+color: #020204;
+}
+
 input {
   margin: 7.5px;
+}
+.modal {
+  background-color: black;
 }
 
 .modal-title {
@@ -59,7 +91,7 @@ input {
   display: inline-block;
   width: 3px;
   height: 30px;
-  background-color: #ccc;
+  background-color: #22b455;
   // padding-top: 20px;
 }
 
@@ -69,7 +101,7 @@ input {
   margin-bottom: 30px;
   display: none;
   .cell {
-    border: 5px solid white;
+    border: 5px solid #22b455;
     height: calc(500px /3);
     font-size: 150px;
     text-align: center;

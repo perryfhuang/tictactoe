@@ -42,14 +42,14 @@ const onMove = function (event) {
     // `If` statements to check whose turn it is, swap currentMove after executing API call and updating game board
     console.log('Current move is: ' + currentMove + ' at event.js')
     if (currentMove === 'x') {
-      event.target.innerHTML = 'x'
+      $(event.target).text('x')
       $('#message').text('O\'s turn')
       api.move(event.target, currentMove)
         .then(ui.moveSuccess)
         .catch(ui.moveFail)
       currentMove = 'o'
     } else if (currentMove === 'o') {
-      event.target.innerHTML = 'o'
+      $(event.target).text('o')
       $('#message').text('X\'s turn')
       api.move(event.target, currentMove)
         .then(ui.moveSuccess)
@@ -62,6 +62,8 @@ const playMenu = function () {
   api.deleteGame()
     .then(ui.deleteGameSuccess)
     .catch(ui.deleteGameFail)
+  $('.cell').on('click', onMove)
+  currentMove = 'x'
 }
 const gameOverPlayMenu = function () {
   $('.cell').on('click', onMove)
