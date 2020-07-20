@@ -72,6 +72,7 @@ const back = function () {
   $('#main-menu').fadeIn(500)
   $('#login, #sign-up, .back').hide()
   $('#message').text('')
+  $('form').trigger('reset')
 }
 const showChangepw = function () {
   $('#changepw, .pw-back').fadeIn(500)

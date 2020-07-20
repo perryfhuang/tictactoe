@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-  margin-top: 10vh;
+  margin-top: 5vh;
   font-family: 'Red Rose', cursive;
 }
 
@@ -126,15 +126,15 @@ input {
 }
 
 .board {
-  height: calc(40vw);
-  width: calc(40vw);
+  height: calc(35vw);
+  width: calc(35vw);
   margin-top: 10px;
   margin-bottom: 30px;
   display: none;
   .cell {
     border: 5px solid #92e5a1;
-    height: calc(40vw / 3);
-    font-size: calc(40vw / 3);
+    height: calc(35vw / 3);
+    font-size: calc(35vw / 3);
     display: flex;
     justify-content: center;
     align-items: center;
