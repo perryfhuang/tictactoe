@@ -1,7 +1,6 @@
 'use strict'
 const api = require('./api.js')
 const ui = require('./ui')
-const store = require('../store')
 
 const onNewGame = function (event) {
   api.newGame()
@@ -13,6 +12,14 @@ const onPlayAgain = function (event) {
   api.newGame()
     .then(ui.playAgainSuccess)
     .catch(ui.playAgainFail)
+
+  // Turn click listeneres for game board BACK ON
+  $('.cell').on('click', onMove)
+  console.log('Play Again successful through events.js')
+
+  // Set first move token as 'X' on successful play again API call
+  currentMove = 'x'
+  console.log('Current move is: ' + currentMove + 'at playAgainSuccess')
 }
 
 // Declare first move token
@@ -27,11 +34,13 @@ const onMove = function (event) {
   // Message to client if cell is taken
   if (event.target.innerHTML !== '') {
     $('#message').text('Cell is taken! Try again.')
+    console.log('Why is this happening?')
   }
 
   // Only execute API call if cell is empty
   if (event.target.innerHTML === '') {
     // `If` statements to check whose turn it is, swap currentMove after executing API call and updating game board
+    console.log('Current move is: ' + currentMove + ' at event.js')
     if (currentMove === 'x') {
       event.target.innerHTML = 'x'
       $('#message').text('O\'s turn')
@@ -54,10 +63,15 @@ const playMenu = function () {
     .then(ui.deleteGameSuccess)
     .catch(ui.deleteGameFail)
 }
-
+const gameOverPlayMenu = function () {
+  $('.cell').on('click', onMove)
+  currentMove = 'x'
+  ui.gameOverPlayMenu()
+}
 module.exports = {
   onNewGame,
   onMove,
   playMenu,
-  onPlayAgain
+  onPlayAgain,
+  gameOverPlayMenu
 }

@@ -33,5 +33,5 @@ $(() => {
   $('#play-menu').on('click', gameEvents.playMenu)
 
   $('#play-again').on('click', gameEvents.onPlayAgain)
-  $('#game-over-play-menu').on('click', gameui.gameOverPlayMenu)
+  $('#game-over-play-menu').on('click', gameEvents.gameOverPlayMenu)
 })

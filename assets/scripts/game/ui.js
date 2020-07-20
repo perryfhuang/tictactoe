@@ -6,7 +6,6 @@ const newGameSuccess = function (response) {
   $('.board, #play-menu, .instructions').show(500)
   $('#main-menu, #stats, #show-changepw, #new-game, #logout').hide()
   $('#message').text('X\'s turn')
-
   store.game = response.game
 }
 const newGameFail = function () {
@@ -22,8 +21,6 @@ const playAgainSuccess = function (response) {
 
   store.game = response.game
   console.log(store)
-  // Turn click listeners BACK ON for the cells after Play Again is successful
-  $('.cell').on('click', gameEvents.onMove)
 }
 const playAgainFail = function () {
   $('#message').text('Failed to create new game =(')
@@ -112,7 +109,9 @@ const gameOverPlayMenu = function () {
   console.log('going to main menu')
   $('.board, #play-menu, .instructions').hide()
   $('#new-game, #stats, #show-changepw, #logout').fadeIn(500)
+  $('.0 ,.1, .2, .3, .4, .5, .6, .7, .8').text('')
   $('#message').text('')
+  // $('.cell').on('click', gameEvents.onMove)
 }
 
 module.exports = {
@@ -124,5 +123,5 @@ module.exports = {
   deleteGameFail,
   playAgainSuccess,
   playAgainFail,
-  gameOverPlayMenu,
+  gameOverPlayMenu
 }
