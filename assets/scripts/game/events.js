@@ -26,9 +26,6 @@ const onPlayAgain = function (event) {
   console.log('Current move is: ' + currentMove + 'at playAgainSuccess')
 }
 
-
-const effects = 'animated bounce'
-const effectsEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd'
 // Declare first move token
 let currentMove = 'x'
 const onMove = function (event) {
@@ -44,16 +41,24 @@ const onMove = function (event) {
   if (event.target.innerHTML === '') {
     // `If` statements to check whose turn it is, swap currentMove after executing API call and updating game board
     $('#taken').text('')
-    console.log('Current move is: ' + currentMove + ' at event.js')
+    // console.log('Current move is: ' + currentMove + ' at event.js')
     if (currentMove === 'x') {
-      $(event.target).text('x').fadeIn()
+      $(event.target).text('x')
+      $(event.target).addClass('ani')
+      setTimeout(function () {
+        $(event.target).removeClass('ani')
+      }, 500)
       $('#message').text('O\'s turn')
       api.move(event.target, currentMove)
         .then(ui.moveSuccess)
         .catch(ui.moveFail)
       currentMove = 'o'
     } else if (currentMove === 'o') {
-      $(event.target).text('o').fadeIn()
+      $(event.target).text('o')
+      $(event.target).addClass('ani')
+      setTimeout(function () {
+        $(event.target).removeClass('ani')
+      }, 500)
       $('#message').text('X\'s turn')
       api.move(event.target, currentMove)
         .then(ui.moveSuccess)

@@ -128,3 +128,18 @@ input {
     }
   }
 }
+
+.ani {
+        animation: ani 0.5s ease-in-out;
+    }
+
+@keyframes ani {
+    from {
+        font-size: 0vh;
+        opacity: 0.5;
+    }
+    to {
+        font-size: calc(35vw / 3);
+        opacity: 1;
+    }
+}
