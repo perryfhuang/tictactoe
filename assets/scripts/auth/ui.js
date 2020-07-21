@@ -1,5 +1,5 @@
 'use strict'
-let store = require('../store')
+const store = require('../store')
 
 const signUpSuccess = function () {
   $('#message').text('Account created!\nGo out there and dominate!')
@@ -43,16 +43,16 @@ const changepwSuccess = function () {
   $('#new-game, #logout, #stats, #show-changepw').fadeIn(500)
   $('#login, #changepw, .back, .pw-back').hide()
 }
-// const changepwFail = function () {
-//   $('#message').text('Failed to change password.')
-// }
+const changepwFail = function () {
+  $('#message').text('Failed to change password.')
+}
 
 const getStatsSuccess = function (response) {
   if (response.games.length === 0) {
     $('#message').text('You haven\'t played any games yet!')
   } else {
-  $('#message').text('Total number of games played: ' + response.games.length).fadeIn(2000)
-}
+    $('#message').text('Total number of games played: ' + response.games.length).fadeIn(2000)
+  }
 }
 const getStatsFail = function (response) {
   $('#message').text('Password changed!')
@@ -94,7 +94,7 @@ module.exports = {
   logoutSuccess,
   logoutFail,
   changepwSuccess,
-  // changepwFail,
+  changepwFail,
   loginClick,
   signUpClick,
   back,
