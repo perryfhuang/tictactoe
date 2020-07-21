@@ -1,9 +1,8 @@
 'use strict'
 const store = require('../store')
-const gameEvents = require('./events')
 
 const newGameSuccess = function (response) {
-  $(' .instructions, .board, #play-menu').show(500)
+  $('.instructions, .board, #play-menu').show(500)
   $('#main-menu, #stats, #show-changepw, #new-game, #logout').hide()
   $('#message').text('X\'s turn')
   store.game = response.game
@@ -126,7 +125,6 @@ const gameOverPlayMenu = function () {
   $('#new-game, #stats, #show-changepw, #logout').fadeIn(500)
   $('.0 ,.1, .2, .3, .4, .5, .6, .7, .8').text('')
   $('#message').text('')
-  // $('.cell').on('click', gameEvents.onMove)
 }
 
 module.exports = {

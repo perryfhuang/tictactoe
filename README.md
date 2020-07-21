@@ -1,129 +1,81 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# browser-template
+# Tic Tac Toe
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+This is my first full stack application, a single-page Tic Tac Toe game with token authentication that communicates with a backend API, which stores user account information as well as game states. The app uses asynchronous API calls through AJAX to handle features like login, logout, sign up, change password, create game, update game (making a move on the board), play again, delete game, show stats, etc. I also used jQuery, Javascript and Bootstrap to develop styling, menu animations, modals, UI flow as well as a 'typing effect' for the Tic Tac Toe title. Responsiveness to viewport size is also supported, with the help of Bootstrap and CSS (game board, X's and O's dynamically changes size based on the device you are currently using the app on!). Please check out the game and give it a try!
 
-## Installation
+## Important Links
 
-1. [Download](../../archive/master.zip) this template.
-    - **Do Not Fork And Clone**
-    - Click the "Clone or Download" button and select "Download Zip".
-1. Move to the `sei/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-1. Rename the template directory from `browser-template-master` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `tictactoe` with the name of
-    your project.
-    - You can search for all instances of text in Atom by pressing
-    `commant + shift + f` on Mac or `ctrl + shift + f` on WSL.
-1. Move into the new project and `git init`.
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
-1. Follow the instructions on your new repository's setup page. For details on
-   how to push to Github, refer to the section on Github entitled "…or push an existing
-   repository from the command line." Further documentation can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
+* LINK TO DEPLOYED APP HERE
 
-## Structure
+## Planning Story
 
-### Scripts
+Prior to development of the app, I answered several questions to help plan things out:
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/app.js`](assets/scripts/app.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
-
-### Config
-
-Developers should set `apiUrls.production` and `apiUrls.development` in
-[`assets/scripts/config.js`](assets/scripts/config.js).  With
-`apiUrls` set, developers may rely on `apiUrl` as the base for API
-URLs.
-
-### Styles
-
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss). Bootstrap version 3 is
-included in this template.
-
-### Forms and Using `getFormFields`
-
-Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-to send to an API.
-
-### Deployment
-
-To deploy a browser-template based SPA, run `grunt deploy`.
-
-## Adding Images
-
-To add images to your project, you must store them in the `public` directory.
-To use the image in HTML or CSS, write the path to the image like this:
-
-```html
-<img src="public/cat.jpg">
-```
-or
-```css
-#my-cool-div {
-  background-image: url('public/cat.jpg')
-}
+How do you plan to approach this project?
+```md
+I plan to approach this project by first planning out how I will work on the app as well as break everything into small, easy-to-solve steps. This includes having a fundamental understanding of all the technologies and languages involved that will make the project function (ex. understanding how the API works, referencing documentation when necessary, etc.) I plan to first hit every requirement for completing the project while also putting my own creative flavor into the project. I will also develop the game with my (and other's) user stories in mind.
 ```
 
-Note that there's no `./` or `/` in front of `public/filename.jpg`.
-
-## Adding Fonts
-
-To add custom fonts to your app, you can either use a CDN like Google Fonts, or
-you can download the fonts and save them in the `public` directory. If you use
-the former method, follow the directions on the website providing the fonts.
-
-For local fonts, put the files in `public`, and then import and use them in a
-`.scss` file like this:
-
-```scss
-@font-face {
-  font-family: 'Nature Beauty';
-  src: url('public/Nature-Beauty.ttf') format('truetype');
-}
-
-.element-with-custom-font {
-  font-family: 'Nature Beauty';
-}
+How will you represent the board in Javascript?
+```md
+The game board will be manipulated by Javascript through DOM events and communicating with the backend game API. For example, HTML elements for the 9 spaces will listen for click events, and send API/ajax calls when a click event happens, which will then update the game board with X and O tokens. When a cell is filled, the click listener for the respective cell will be disabled (in the actual game, this is not how I implemented this feature - instead, the API simply does not get called if a cell is taken, and a message notifies the player). Each API call will also check if the game is over (if there are 3 spaces in a row with the same token) and notify the player when the game is over (win/lose/tie).
 ```
 
-## Tasks
+How will you use version control to backup / track your project?
+```md
+I will use git and GitHub, GitHub-pages deployment, and grunt to backup, track, test and deplot my project. I will commit often, keeping in mind that I can revert to an earlier version if anything becomes broken. I will deploy early and often, and always keep in mind the difference between development and production environments. I will only deploy code that I know is fully functional.
+```
 
-Developers should run these often!
+How you plan to keep your code modular?
+```md
+I plan to keep my code modular by applying everything that I have learned and picked up in SEI so far. This includes separating HTML, CSS and Javascript files. I will also separate JS files/functions depending on their functionality, including event listeners, API calls, UI updates, url configs, token storing, etc.
+```
 
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
-- `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
-- `grunt deploy`: builds and deploys master branch
+What creative spin will you add to your project?
+```md
+I will add creative flavor to my project by developing a game that myself, as a gamer, would appreciate, enjoy and overall be impressed with. This includes having a simple yet fluid and appealing visual design/UI, the game overall runs very smoothly with no bugs, offers several customized user options, and is overall a fun experience. Emphasis will be placed on simple but awesome. A visual theme (eg. color and menus) will be developed based on my own personal taste.
+```
 
+What additional features will you build if you have extra time?
+```md
+If I have extra time, there are some additional features I want to build for the project. This includes developing a computer player that has varying level of difficulties (eg. easy, medium, hard) and track and view player stats (in addition to the required stat 'number of games played'). Some other features I want to build include being able to 'Play as a Guest' (not sure if this will be possible, since player must be an authenticated user that needs to communicate with the API), having animations (such as X and O animations for the game board) to make the game more interactive and feel less static, and having more visual options such as setting the color theme of the app.
+```
 
-## Additional Resources
+Most of the additional features I mentioned above were not implemented, such as developing an AI/computer. This is outside the scope of the project and definitely something for future iterations of the app. In addition, currently the only stats able to be tracked are total number of games played. 'Play as a Guest' feature is also currently unavailable, since the API requires token authentication for games to be played.
 
-- [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-- [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
+### User Stories
 
-## [License](LICENSE)
+The users I wrote before development:
 
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+1. As a player, I want to be able to play a game of tic tac toe so that I can have fun while playing the game.
+2. As a player, I want to be able to have tracked player stats so that I can see how I perform (wins/losses, # of moves, etc.)
+3. As a player, I want a visually appealing and interactive game so that my experience while playing the game is entertaining and rich, and not one-dimensional and boring.
+4. As a player, I want the UI to be simple and easy to navigate so that I am able to easily traverse through menus and quickly start new games.
+5. As a player, I want to be able to play against a computer with varying levels of difficulty so that I can have continual enjoyment from the game as well as a feeling of progression/ being challenged while playing the game.
+6. As a player, I want to be able to play against another human player so that I can also enjoy the game with my friends!
+7. As a player, I want the game to be easily accessible and not have any issues running/have any annoying bugs.
+8. As a player, I want to be able to play as a guest so I do not have to make an account just to play the game (not sure if possible)
+9. As a player, I want to be able to be have the option to change the color theme of the app.
+
+Most of these user stories were definitely stretch goals. For my next project, I definitely want to keep in mind keeping the user stories a little more simple and realistic in terms of development goals considering the skills I currently have and time frame available.
+
+### Technologies Used
+
+* HTML5
+* CSS/Sass
+* Bootstrap 4
+* Javascript
+* jQuery
+
+### Future Iterations
+
+Many of the features that I want to deploy in future iterations of the app have been mentioned. These include adding animations for messaging, X and O tokens entering the board, additional user stats to be tracked such as total wins, losses and ties, as well as developing an AI to play against with varying levels of difficulty (Easy, Medium, Hard). I had a slight idea of how to start developing this while drawing the wireframes for the app. One way to develop a "dumb" AI would simply have the computer use RNG to choose any random open cell. Developing a smarter AI would require some deeper research on my part. I would also like to develop different colors/themes to be toggled for the app though an options menu.
+
+### Images
+
+Plannning Wireframes
+
+![Wireframe Page 1](public/TicTacToe wireframe - 1.JPG 'Page 1')
+
+![Wireframe Page](public/TicTacToe wireframe - 2.JPG 'Page 2')

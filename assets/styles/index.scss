@@ -2,12 +2,6 @@
 
 body {
   text-align: center;
-  // vertical-align: middle
-  // line-height: calc(40vw / 3);
-
-  // background-image: url();
-  // background-repeat: repeat;
-  // background-size: cover;
   background-color: black;
   color: #22b455;
   font-family: 'Red Rose', cursive;
@@ -98,22 +92,13 @@ input {
   white-space: pre-wrap;
   color: #92e5a1;
 }
-// .container {
-//   display: flex;
-//   text-align: center;
-//   #message {
-//     white-space: pre-wrap;
-//     align-items: center;
-//     justify-content: center;
-//   }
-// }
+
 .cursor {
   display: inline-block;
   width: 3px;
   background-color: #22b455;
   animation: blink 1s infinite;
   margin-left: 0.1rem;
-  // padding-top: 20px;
 }
 .cursor.typing {
   animation: none;

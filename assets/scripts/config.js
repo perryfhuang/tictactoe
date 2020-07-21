@@ -1,5 +1,4 @@
 'use strict'
-// 4741
 
 let apiUrl
 const apiUrls = {
