@@ -1,4 +1,4 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)
 
 # Tic Tac Toe
 
@@ -46,7 +46,7 @@ Most of the additional features I mentioned above were not implemented, such as 
 
 ### User Stories
 
-The users I wrote before development:
+The user stories I wrote before development:
 
 1. As a player, I want to be able to play a game of tic tac toe so that I can have fun while playing the game.
 2. As a player, I want to be able to have tracked player stats so that I can see how I perform (wins/losses, # of moves, etc.)
@@ -76,6 +76,6 @@ Many of the features that I want to deploy in future iterations of the app have 
 
 Plannning Wireframes
 
-![Wireframe Page 1](public/TicTacToe wireframe - 1.JPG 'Page 1')
+![Wireframe Page 1](/public/TicTacToe wireframe - 1.JPG "Page 1")
 
-![Wireframe Page](public/TicTacToe wireframe - 2.JPG 'Page 2')
+![Wireframe Page](/public/TicTacToe wireframe - 2.JPG "Page 2")
