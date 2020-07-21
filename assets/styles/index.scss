@@ -108,15 +108,15 @@ input {
 }
 
 .board {
-  height: calc(35vw);
-  width: calc(35vw);
+  height: calc(45vh);
+  width: calc(45vh);
   margin-top: 10px;
   margin-bottom: 30px;
   display: none;
   .cell {
     border: 5px solid #92e5a1;
-    height: calc(35vw / 3);
-    font-size: calc(35vw / 3);
+    height: calc(45vh / 3);
+    font-size: calc(45vh / 3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +139,7 @@ input {
         opacity: 0.5;
     }
     to {
-        font-size: calc(35vw / 3);
+        font-size: 15vh;
         opacity: 1;
     }
 }
