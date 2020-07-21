@@ -4,7 +4,7 @@ This is my first full stack application, a single-page Tic Tac Toe game applicat
 
 ## Important Links
 
-* LINK TO DEPLOYED APP HERE
+* [Tic Tac Toe](https://perryfhuang.github.io/tictactoe/)
 
 ## Planning Story
 
