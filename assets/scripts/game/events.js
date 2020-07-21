@@ -32,9 +32,6 @@ const effectsEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEn
 // Declare first move token
 let currentMove = 'x'
 const onMove = function (event) {
-  // if (store.game.over === true) {
-  //   return null
-  // }
   // console.log(event.target)
   // console.log(event.target.dataset.index)
 
@@ -69,12 +66,9 @@ const playMenu = function () {
   api.deleteGame()
     .then(ui.deleteGameSuccess)
     .catch(ui.deleteGameFail)
-  // $('.cell').on('click', onMove)
   currentMove = 'x'
 }
 const gameOverPlayMenu = function () {
-  // $('.cell').on('click', onMove)
-  // currentMove = 'x'
   ui.gameOverPlayMenu()
 }
 module.exports = {
