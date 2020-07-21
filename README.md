@@ -70,7 +70,7 @@ Many of the features that I want to deploy in future iterations of the app have 
 Plannning Wireframes
 
 Page 1
-![Wireframe Page 1](/public/TicTacToeWireframe-1.jpg "Page 1")
+![Wireframe Page 1](https://i.imgur.com/Q0J9NPw.jpg "Page 1")
 
 Page 2
-![Wireframe Page](/public/TicTacToeWireframe-2.jpg "Page 2")
+![Wireframe Page](https://i.imgur.com/MFwY4oh.jpg "Page 2")
