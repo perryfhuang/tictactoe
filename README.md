@@ -73,9 +73,7 @@ Most of these user stories were definitely stretch goals. For my next project, I
 
 Many of the features that I want to deploy in future iterations of the app have been mentioned. These include adding animations for messaging, X and O tokens entering the board, additional user stats to be tracked such as total wins, losses and ties, as well as developing an AI to play against with varying levels of difficulty (Easy, Medium, Hard). I had a slight idea of how to start developing this while drawing the wireframes for the app. One way to develop a "dumb" AI would be to simply have the computer use RNG to choose any random open cell. Developing a smarter AI would require some deeper research on my part. I would also like to develop different colors/themes to be toggled for the app though an options menu.
 
-### Images
-
-Plannning Wireframes
+### Planning Wireframes
 
 Page 1
 ![Wireframe Page 1](https://i.imgur.com/Q0J9NPw.jpg "Page 1")
