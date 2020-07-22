@@ -6,6 +6,14 @@ This is my first full stack application, a single-page Tic Tac Toe game applicat
 
 * [Tic Tac Toe](https://perryfhuang.github.io/tictactoe/)
 
+## Screenshots 
+
+![Login Menu gif](https://i.imgur.com/QUu4Ptw.gif)
+![Login Menu](https://i.imgur.com/nnqkPzf.png)
+![Main Menu](https://i.imgur.com/emJf2y3.png)
+![How to Play Modal](https://i.imgur.com/lC3H6B6.png)
+![Game Board](https://i.imgur.com/sjJo31r.png)
+
 ## Planning Story
 
 Prior to development of the app, I answered several questions to help plan things out:
