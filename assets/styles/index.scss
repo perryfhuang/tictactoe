@@ -114,6 +114,7 @@ input {
   margin-bottom: 30px;
   display: none;
   .cell {
+    cursor: pointer;
     border: 5px solid #92e5a1;
     height: calc(45vh / 3);
     font-size: calc(45vh / 3);
