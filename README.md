@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-This is my first full stack application, a single-page Tic Tac Toe game application with token authentication that communicates with a backend API, which stores user account information as well as game states. The app uses asynchronous API calls through AJAX to handle features like login, logout, sign up, change password, create game, update game (making a move on the board), play again, delete game, show stats, etc. I also used jQuery, Javascript and Bootstrap to develop styling, menu animations, modals, UI flow as well as a 'typing effect' for the Tic Tac Toe title. Responsiveness to viewport size is also supported, with the help of Bootstrap and CSS (game board, X's and O's dynamically changes size based on the device you are currently using the app on!). Please check out the game and give it a try!
+This is my first full stack application, a single-page Tic Tac Toe game application with token authentication that communicates with a backend API, which stores user account information as well as game states. The app uses asynchronous API calls through AJAX to handle features like login, logout, sign up, change password, create game, update game (making a move on the board), play again, delete game, show stats, etc. I also used jQuery, JavaScript and Bootstrap to develop styling, menu animations, modals, UI flow as well as a 'typing effect' for the Tic Tac Toe title. Responsiveness to viewport size is also supported, with the help of Bootstrap and CSS (game board, X's and O's dynamically changes size based on the device you are currently using the app on!). Please check out the game and give it a try!
 
 ## Important Links
 
@@ -14,9 +14,9 @@ How do you plan to approach this project?
 
 >I plan to approach this project by first planning out how I will work on  the app as well as break everything into small, easy-to-solve steps. This  includes having a fundamental understanding of all the technologies and  languages involved that will make the project function (ex. understanding  how the API works, referencing documentation when necessary, etc.) I plan  to first hit every requirement for completing the project while also  putting my own creative flavor into the project. I will also develop the  game with my (and other's) user stories in mind.
 
-How will you represent the board in Javascript?
+How will you represent the board in JavaScript?
 
->The game board will be manipulated by Javascript through DOM events and communicating with the backend game API. For example, HTML elements for the 9 spaces will listen for click events, and send API/ajax calls when a click event happens, which will then update the game board with X and O tokens. When a cell is filled, the click listener for the respective cell will be disabled (in the actual game, this is not how I implemented this feature - instead, the API simply does not get called if a cell is taken, and a message notifies the player). Each API call will also check if the game is over (if there are 3 spaces in a row with the same token) and notify the player when the game is over (win/lose/tie).
+>The game board will be manipulated by JavaScript through DOM events and communicating with the backend game API. For example, HTML elements for the 9 spaces will listen for click events, and send API/ajax calls when a click event happens, which will then update the game board with X and O tokens. When a cell is filled, the click listener for the respective cell will be disabled (in the actual game, this is not how I implemented this feature - instead, the API simply does not get called if a cell is taken, and a message notifies the player). Each API call will also check if the game is over (if there are 3 spaces in a row with the same token) and notify the player when the game is over (win/lose/tie).
 
 How will you use version control to backup / track your project?
 
@@ -25,7 +25,7 @@ How will you use version control to backup / track your project?
 
 How you plan to keep your code modular?
 
->I plan to keep my code modular by applying everything that I have learned and picked up in SEI so far. This includes separating HTML, CSS and Javascript files. I will also separate JS files/functions depending on their functionality, including event listeners, API calls, UI updates, url configs, token storing, etc.
+>I plan to keep my code modular by applying everything that I have learned and picked up in SEI so far. This includes separating HTML, CSS and JavaScript files. I will also separate JS files/functions depending on their functionality, including event listeners, API calls, UI updates, url configs, token storing, etc.
 
 What creative spin will you add to your project?
 
@@ -58,7 +58,7 @@ Most of these user stories were definitely stretch goals. For my next project, I
 * HTML5
 * CSS/Sass
 * Bootstrap 4
-* Javascript
+* JavaScript
 * jQuery
 
 ### Future Iterations
