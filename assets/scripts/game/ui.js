@@ -114,6 +114,7 @@ const deleteGameSuccess = function () {
   $('.board, #play-menu, .instructions').hide()
   $('#new-game, #stats, #show-changepw, #logout').fadeIn(500)
   $('.0 ,.1, .2, .3, .4, .5, .6, .7, .8').text('')
+  $('#taken').text('')
 }
 const deleteGameFail = function () {
   $('#message').text('Could not move to main menu or delete current game.')
