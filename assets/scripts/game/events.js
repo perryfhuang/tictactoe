@@ -8,7 +8,6 @@ const onNewGame = function (event) {
     .catch(ui.newGameFail)
   if ($._data($('.cell')[0], 'events') === undefined) {
     $('.cell').on('click', onMove)
-    console.log('Successfully attached click listeners.')
   }
 }
 
@@ -19,19 +18,14 @@ const onPlayAgain = function (event) {
   // Turn click listeners for game board BACK ON if it is off using the _data function in jquery (checking to see if an event listener exists)
   if ($._data($('.cell')[0], 'events') === undefined) {
     $('.cell').on('click', onMove)
-    console.log('Play Again successful through events.js')
   }
   // Set first move token as 'X' on successful play again API call
   currentMove = 'x'
-  console.log('Current move is: ' + currentMove + 'at playAgainSuccess')
 }
 
 // Declare first move token
 let currentMove = 'x'
 const onMove = function (event) {
-  // console.log(event.target)
-  // console.log(event.target.dataset.index)
-
   // Message to client if cell is taken
   if (event.target.innerHTML !== '') {
     $('#taken').text('Cell is taken! Try again.')
@@ -41,7 +35,6 @@ const onMove = function (event) {
   if (event.target.innerHTML === '') {
     // `If` statements to check whose turn it is, swap currentMove after executing API call and updating game board
     $('#taken').text('')
-    // console.log('Current move is: ' + currentMove + ' at event.js')
     if (currentMove === 'x') {
       $(event.target).text('x')
       $(event.target).addClass('ani')

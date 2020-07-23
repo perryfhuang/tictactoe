@@ -20,7 +20,6 @@ const loginSuccess = function (response) {
 
   $('#new-game, #logout, #stats, #show-changepw').fadeIn(500)
   $('#login, .back').hide()
-  console.log(store)
 }
 const loginFail = function (response) {
   $('#message').text('Login failed. =(\nPlease check credentials.')

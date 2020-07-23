@@ -19,14 +19,12 @@ const playAgainSuccess = function (response) {
   $('#message').text('X\'s turn')
 
   store.game = response.game
-  console.log(store)
 }
 const playAgainFail = function () {
   $('#message').text('Failed to create new game =(')
 }
 
 const moveSuccess = function (response) {
-  console.log(response)
   if (response.game.over === true) {
     // Check to see who the winner is. First check if it's a tie (if all cells are filled). Must place all logic AFTER tie logic in case there is a case where winner is decided on the last cell.
     const cells = response.game.cells
@@ -121,7 +119,6 @@ const deleteGameFail = function () {
 }
 
 const gameOverPlayMenu = function () {
-  console.log('going to main menu')
   $('.board, #play-menu, .instructions').hide()
   $('#new-game, #stats, #show-changepw, #logout').fadeIn(500)
   $('.0 ,.1, .2, .3, .4, .5, .6, .7, .8').text('')

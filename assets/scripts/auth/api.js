@@ -26,7 +26,6 @@ const logout = function () {
   })
 }
 const changepw = function (formData) {
-  console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
